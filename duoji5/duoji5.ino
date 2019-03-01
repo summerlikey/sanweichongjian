@@ -5,17 +5,17 @@ int pulsewidth;//定义脉宽变量
 int val;
 void servopulse(int servopin,int myangle)/*定义一个脉冲函数，用来模拟方式产生PWM值*/
 {
-  for (int i=0;i<100;i++)
- {
+  
+ 
  pulsewidth=(myangle*11)+500;//将角度转化为500-2480 的脉宽值
   digitalWrite(servopin,HIGH);//将舵机接口电平置高
 //  delay(1500);//1500高电平
 delayMicroseconds(pulsewidth);//延时脉宽值的微秒数
 digitalWrite(servopin,LOW);//将舵机接口电平置低
 //  delay(1000);//1000低电平
-delayMicroseconds(2480-pulsewidth);
-// delay(20-pulsewidth/1000);//延时周期内剩余时间
-}
+//delayMicroseconds(2480-pulsewidth);
+delay(20-pulsewidth/1000);//延时周期内剩余时间
+
 }
 void setup()
 {
@@ -34,11 +34,11 @@ void loop()
     Serial.print(val,DEC);
     Serial.println();
     servopulse(servopin,val);//模拟产生PWM
-   /* for(int i=0;i<=50;i++) //产生PWM个数，等效延时以保证能转到响应角度
+   for(int i=0;i<=50;i++) //产生PWM个数，等效延时以保证能转到响应角度
     {
       servopulse(servopin,val);//模拟产生PWM
     }
-    */
+    
   }
 }
 
