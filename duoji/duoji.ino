@@ -6,9 +6,10 @@ void servopulse(int servopin,int myangle)/*定义一个脉冲函数，用来模�
 {
   pulsewidth=(myangle*11)+500;//将角度转化为500-2480 的脉宽值
   digitalWrite(servopin,HIGH);//将舵机接口电平置高
-  delayMicroseconds(pulsewidth);//延时脉宽值的微秒数
+  delay(pulsewidth);
+  //delayMicroseconds(pulsewidth);//延时脉宽值的微秒数
   digitalWrite(servopin,LOW);//将舵机接口电平置低
-  delay(20-pulsewidth/1000);//延时周期内剩余时间
+ delay(20-pulsewidth/1000);//延时周期内剩余时间
 }
 void setup()
 {
