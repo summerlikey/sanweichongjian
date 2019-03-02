@@ -21,6 +21,7 @@ Serial.begin(9600);
 delay(500);
 Serial.println("servu=o_seral_simple ready" ) ;
 }
+
 void loop()//将0到9的数转化为0到180角度，并让LED闪烁相应数的次数
 {
 val=Serial.read();//读取串行端口的值
@@ -37,4 +38,5 @@ for(int i=0;i<=50;i++)//给予舵机足够的时间让它转到指定角度
 servopulse(sp1,val1);//引用脉冲函数
 }
 }
+
 }
