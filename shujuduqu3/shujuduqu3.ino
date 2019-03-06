@@ -23,20 +23,24 @@ Serial.write(0x77);
 void loop()
 {
 //循环代码
+
+ Serial.println(111111);
 delay(1000);
    Serial.write(0x80); 
    Serial.write(0x06);
    Serial.write(0x02);
    Serial.write(0x78);
-
-if(Serial.available()>0){
+comdata = Serial.readString();
+ Serial.println(comdata);
+//if(Serial.available()>0){
 // delay(100);
-      comdata = Serial.readString();
-      Serial.print("long:");
-      Serial.println(comdata);
-    }
-    comdata = "";
+  //    comdata = Serial.readString();
+//   Serial.print("long:");
+  //    Serial.println(comdata);
+ //   }
+  //  comdata = "";
 //延迟1s
+ Serial.println(222222);//传感器两个信号输出一次
 delay(1000);
 /*
 //如果硬件串口有数据
