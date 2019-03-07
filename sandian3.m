@@ -16,4 +16,6 @@ mesh(X,Y,Z);
 %surf(X,Y,Z,c);
 title 'Points to Surface by griddata'
 hold on
-plot3(x,y,z,'*')           
+plot3(x,y,z,'*')   
+std2(z)
+
