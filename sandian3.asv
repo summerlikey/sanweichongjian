@@ -12,8 +12,7 @@ z=[0.1456 0.1456 0.1683 0.1333 0.1333 0.1465 0.1371 0.1352 0.1513];
 Z=griddata(x,y,z,X,Y);
 %»æÖÆÇúÃæ
 c=Z;
-mesh(X,Y,Z);
-%surf(X,Y,Z,c);
+surf(X,Y,Z,C);
 title 'Points to Surface by griddata'
 hold on
 plot3(x,y,z,'*')           
