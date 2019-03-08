@@ -88,6 +88,7 @@ delay(5000);
    Serial.write(0x06);
    Serial.write(0x02);
    Serial.write(0x78);//输入命令
+   
 comdata = Serial.readString();
  Serial.println(comdata);
 //if(Serial.available()>0){
