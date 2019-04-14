@@ -1,6 +1,6 @@
 # sanweichongjian
 课程项目，利用激光传感器进行三维重建工作  
- ![image](https://github.com/summerlikey/sanweichongjian/raw/master/image/myimage.png) 
+
 采用arduino uno 单片机  
 采用激光传感器  
 采用舵机制作2自由度云台  
