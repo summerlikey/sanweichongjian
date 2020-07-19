@@ -1,4 +1,4 @@
-# sanweichongjian
+# 基于激光测距传感器的三维重建
 课程项目，利用激光传感器进行三维重建工作  
 
 采用arduino uno 单片机  
